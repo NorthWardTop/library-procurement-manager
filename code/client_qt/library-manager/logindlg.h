@@ -18,8 +18,8 @@ public:
 private:
     Ui::LoginDlg *ui;
 private slots:
-    onLogin();
-    onClose();
+    void onLogin();
+    void onClose();
 };
 
 #endif // LOGINDLG_H

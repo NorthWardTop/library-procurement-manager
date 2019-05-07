@@ -14,13 +14,13 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
+   <widget class="QTabWidget" name="info_tab">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
       <width>651</width>
-      <height>491</height>
+      <height>501</height>
      </rect>
     </property>
     <property name="tabPosition">
@@ -36,17 +36,7 @@
      <attribute name="title">
       <string>需求列表</string>
      </attribute>
-     <widget class="QListView" name="listView">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>651</width>
-        <height>411</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="demandSubmit_btn">
       <property name="geometry">
        <rect>
         <x>530</x>
@@ -59,7 +49,7 @@
        <string>提交</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="demandRefresh_btn">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -72,25 +62,38 @@
        <string>刷新</string>
       </property>
      </widget>
-    </widget>
-    <widget class="QWidget" name="buy_Tab">
-     <attribute name="title">
-      <string>已购列表</string>
-     </attribute>
-     <widget class="QListView" name="listView_2">
+     <widget class="QTableView" name="tableView">
       <property name="geometry">
        <rect>
-        <x>0</x>
+        <x>-5</x>
         <y>0</y>
         <width>651</width>
         <height>411</height>
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="delete_btn">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>70</x>
+        <y>430</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>删除</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="buy_Tab">
+     <attribute name="title">
+      <string>已购列表</string>
+     </attribute>
+     <widget class="QPushButton" name="buyRefresh_btn">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
         <y>430</y>
         <width>75</width>
         <height>23</height>
@@ -98,6 +101,16 @@
       </property>
       <property name="text">
        <string>刷新</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="tableView_2">
+      <property name="geometry">
+       <rect>
+        <x>-5</x>
+        <y>1</y>
+        <width>651</width>
+        <height>411</height>
+       </rect>
       </property>
      </widget>
     </widget>

@@ -14,12 +14,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QListView>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -31,12 +31,13 @@ public:
     QWidget *centralWidget;
     QTabWidget *info_tab;
     QWidget *demand_Tab;
-    QListView *demand_list;
     QPushButton *demandSubmit_btn;
     QPushButton *demandRefresh_btn;
+    QTableView *tableView;
+    QPushButton *delete_btn;
     QWidget *buy_Tab;
-    QListView *buy_list;
     QPushButton *buyRefresh_btn;
+    QTableView *tableView_2;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -55,24 +56,27 @@ public:
         info_tab->setTabShape(QTabWidget::Triangular);
         demand_Tab = new QWidget();
         demand_Tab->setObjectName(QStringLiteral("demand_Tab"));
-        demand_list = new QListView(demand_Tab);
-        demand_list->setObjectName(QStringLiteral("demand_list"));
-        demand_list->setGeometry(QRect(0, 0, 651, 411));
         demandSubmit_btn = new QPushButton(demand_Tab);
         demandSubmit_btn->setObjectName(QStringLiteral("demandSubmit_btn"));
         demandSubmit_btn->setGeometry(QRect(530, 430, 75, 23));
         demandRefresh_btn = new QPushButton(demand_Tab);
         demandRefresh_btn->setObjectName(QStringLiteral("demandRefresh_btn"));
         demandRefresh_btn->setGeometry(QRect(280, 430, 75, 23));
+        tableView = new QTableView(demand_Tab);
+        tableView->setObjectName(QStringLiteral("tableView"));
+        tableView->setGeometry(QRect(-5, 0, 651, 411));
+        delete_btn = new QPushButton(demand_Tab);
+        delete_btn->setObjectName(QStringLiteral("delete_btn"));
+        delete_btn->setGeometry(QRect(70, 430, 75, 23));
         info_tab->addTab(demand_Tab, QString());
         buy_Tab = new QWidget();
         buy_Tab->setObjectName(QStringLiteral("buy_Tab"));
-        buy_list = new QListView(buy_Tab);
-        buy_list->setObjectName(QStringLiteral("buy_list"));
-        buy_list->setGeometry(QRect(0, 0, 651, 411));
         buyRefresh_btn = new QPushButton(buy_Tab);
         buyRefresh_btn->setObjectName(QStringLiteral("buyRefresh_btn"));
-        buyRefresh_btn->setGeometry(QRect(530, 430, 75, 23));
+        buyRefresh_btn->setGeometry(QRect(280, 430, 75, 23));
+        tableView_2 = new QTableView(buy_Tab);
+        tableView_2->setObjectName(QStringLiteral("tableView_2"));
+        tableView_2->setGeometry(QRect(-5, 1, 651, 411));
         info_tab->addTab(buy_Tab, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
@@ -99,6 +103,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
         demandSubmit_btn->setText(QApplication::translate("MainWindow", "\346\217\220\344\272\244", Q_NULLPTR));
         demandRefresh_btn->setText(QApplication::translate("MainWindow", "\345\210\267\346\226\260", Q_NULLPTR));
+        delete_btn->setText(QApplication::translate("MainWindow", "\345\210\240\351\231\244", Q_NULLPTR));
         info_tab->setTabText(info_tab->indexOf(demand_Tab), QApplication::translate("MainWindow", "\351\234\200\346\261\202\345\210\227\350\241\250", Q_NULLPTR));
         buyRefresh_btn->setText(QApplication::translate("MainWindow", "\345\210\267\346\226\260", Q_NULLPTR));
         info_tab->setTabText(info_tab->indexOf(buy_Tab), QApplication::translate("MainWindow", "\345\267\262\350\264\255\345\210\227\350\241\250", Q_NULLPTR));

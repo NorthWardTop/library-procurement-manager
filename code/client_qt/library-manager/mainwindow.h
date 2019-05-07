@@ -15,6 +15,12 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void onDemandRefresh_btn();
+    void onDemandSubmit_btn();
+    void onBuyRefresh_btn();
+    void onDelete_btn();
+
 private:
     Ui::MainWindow *ui;
 };

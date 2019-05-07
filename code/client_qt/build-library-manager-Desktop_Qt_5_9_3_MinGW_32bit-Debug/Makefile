@@ -210,6 +210,7 @@ Makefile: ../library-manager/library-manager.pro D:/QtInstall/5.9.3/mingw53_32/m
 		D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/qt_config.prf \
 		D:/QtInstall/5.9.3/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/toolchain.prf \
 		D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/default_pre.prf \
@@ -236,6 +237,7 @@ Makefile: ../library-manager/library-manager.pro D:/QtInstall/5.9.3/mingw53_32/m
 		D:/QtInstall/5.9.3/mingw53_32/lib/qtmaind.prl \
 		D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Widgets.prl \
 		D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Gui.prl \
+		D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Sql.prl \
 		D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Core.prl
 	$(QMAKE) -o Makefile ../library-manager/library-manager.pro -spec win32-g++ CONFIG+=debug CONFIG+=qml_debug
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/spec_pre.prf:
@@ -387,6 +389,7 @@ D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/qt_functions.prf:
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/qt_config.prf:
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/win32-g++/qmake.conf:
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/exclusive_builds.prf:
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/toolchain.prf:
 D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/default_pre.prf:
@@ -413,6 +416,7 @@ D:/QtInstall/5.9.3/mingw53_32/mkspecs/features/lex.prf:
 D:/QtInstall/5.9.3/mingw53_32/lib/qtmaind.prl:
 D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Widgets.prl:
 D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Gui.prl:
+D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Sql.prl:
 D:/QtInstall/5.9.3/mingw53_32/lib/Qt5Core.prl:
 qmake: FORCE
 	@$(QMAKE) -o Makefile ../library-manager/library-manager.pro -spec win32-g++ CONFIG+=debug CONFIG+=qml_debug
